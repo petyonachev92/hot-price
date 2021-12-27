@@ -6,7 +6,10 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 function addFireToHot() {
-  let hot = document.getElementsByClassName('hot')[0];
-  let price = hot.textContent;
-  hot.textContent = price + '🔥';
+  let hot = document.querySelectorAll('.hot');
+
+  hot.forEach(el => {
+    let price = el.textContent;
+    el.textContent = price + '🔥';
+  })
 }
